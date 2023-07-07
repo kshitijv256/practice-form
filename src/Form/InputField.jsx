@@ -9,7 +9,7 @@ function InputField(props) {
       </label>
       <input
         type="text"
-        className="border-2 border-rose-300 rounded-sm ml-2 h-10"
+        className="border-2 border-rose-300 rounded-sm ml-2 p-2"
         name={name}
         value={form[name]}
         onChange={(e) => {

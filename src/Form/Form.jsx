@@ -15,7 +15,7 @@ function Form() {
   };
 
   return (
-    <div className="mx-2 md:w-1/2 lg:w-1/3">
+    <div className="mx-2 md:w-1/2 lg:w-1/3 w-full m-2">
       <h1 className="font-bold text-2xl">Student Form</h1>
       <InputField key={"name"} name="name" form={form} onChangeCB={onChange} />
       <InputField key={"dept"} name="dept" form={form} onChangeCB={onChange} />
