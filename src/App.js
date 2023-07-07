@@ -1,14 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Form from "./form/Form";
+import Form from "./Form/Form";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Student Form</h1>
+      <main className="flex w-full flex-col items-center">
         <Form />
-      </header>
+      </main>
     </div>
   );
 }
