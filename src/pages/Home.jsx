@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Button from "../Button/Button";
+import Button from "../components/Button";
+import InputController from "./InputController";
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -42,6 +43,7 @@ function Home() {
           className="border-2 border-gray-400 rounded-lg p-2"
         />
       </div>
+      <InputController />
     </div>
   );
 }
