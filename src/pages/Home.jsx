@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Button from "../components/Button";
 import InputController from "./InputController";
 
@@ -7,14 +7,17 @@ function Home() {
   const texts = ["Click", "Clicked"];
   const styles = ["shadow-lg", "bg-gray-200"];
   const [search, setSearch] = useState("");
+  const myDiv = useRef(0);
+  const memo = useMemo(() => `my Count ${count}`, [count]);
 
   const handleClick = () => {
     setCount(count + 1);
+    // i.current = i.current + 1;
   };
 
-  // useEffect(() => {
-  //   setCount((count) => count + 1);
-  // }, []);
+  useEffect(() => {
+    console.log(memo);
+  });
 
   useEffect(() => {
     let timeout = setTimeout(() => {
@@ -26,7 +29,7 @@ function Home() {
   }, [search]);
 
   return (
-    <div>
+    <div ref={myDiv}>
       <div className="text-xl my-4 flex gap-4 items-center">
         Count: {count}
         <Button

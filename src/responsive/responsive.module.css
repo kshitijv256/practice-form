@@ -1,0 +1,18 @@
+.box {
+    height: 100px;
+    min-width: 20px;
+    background-color: aqua;
+}
+
+@media screen and (min-width: 768px) {
+    .box {
+        min-width: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .box {
+        min-width: 200px;
+    }
+}
+
